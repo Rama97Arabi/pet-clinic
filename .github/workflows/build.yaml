@@ -22,10 +22,9 @@ jobs:
           #### AUFGABE COMPILE, DOCKER BUILD UND PUSH
             # hier ist Platz für maven package und docker build
             mvn package
-            docker build -t ghcr.io/rama97arabi/pet-clinic:latest
+            docker build -t ghcr.io/rama97arabi/pet-clinic:latest .
             docker login ghcr.io -u Rama97Arabi --password $GITHUB_ACCESSTOKEN
-            docker push ghcr.io/rama97arabi/pet-clinic:latest  
-
+            docker push ghcr.io/rama97arabi/pet-clinic:latest
 
             
             
